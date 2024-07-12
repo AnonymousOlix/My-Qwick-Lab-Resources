@@ -6,7 +6,7 @@
 
 - Copy Below Code and Paste in Terminal
 
-#### Open order_items.view.
+#### Open Google Cloud Console Terminal.
 
 
 ```bash
