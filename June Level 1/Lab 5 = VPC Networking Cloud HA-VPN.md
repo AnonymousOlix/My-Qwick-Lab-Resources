@@ -3,11 +3,9 @@
 
 ## 
 
-- Click the toggle button to enter Development mode.
+- Copy Below Code and Paste in Terminal
 
-- From the Develop menu, select the qwiklabs_ecommerce project.
-
-#### Open order_items.view.
+#### Open Google Cloud Console Terminal.
 
 
 ```bash
