@@ -1,12 +1,10 @@
-
+Block command line pushes t
 # Networking 101
 
 
 ## 
 
-- Click the toggle button to enter Development mode.
-
-- From the Develop menu, select the qwiklabs_ecommerce project.
+- Copy Below Code and Paste in Terminal
 
 #### Open order_items.view.
 
