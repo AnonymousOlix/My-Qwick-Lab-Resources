@@ -1,4 +1,3 @@
-
 # Arcade Hero: Enter the Cloud Function Golang
 
 
