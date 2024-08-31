@@ -1,0 +1,29 @@
+# Arcade Hero: Enter the Cloud Function Python
+
+
+
+## 
+
+- Open Terminal
+- paste below code
+
+
+```bash
+export REGION=
+
+curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Arcade%20Hero/quicklabarc235.sh
+
+sudo chmod +x quicklabarc235.sh
+
+./quicklabarc235.sh
+```
+
+
+
+### Congratulations 🎉 for completing the Lab !
+
+##### *You Have Successfully Demonstrated Your Skills And Determination.*
+
+#### *Well done!*
+
+# [MY QWIK LAB](https://www.youtube.com/@MyQwiklab)
