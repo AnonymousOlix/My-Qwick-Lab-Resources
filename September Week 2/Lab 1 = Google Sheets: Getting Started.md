@@ -2,7 +2,7 @@
 
 ## 
 
-- Download Below Folder and Extract
+- Download Below Files
 
 # [Download](https://drive.google.com/drive/folders/1Xi03XOQe_ZWaudlaKYL7gketBiIBgtun?usp=sharing)
 
