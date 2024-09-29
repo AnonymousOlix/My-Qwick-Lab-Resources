@@ -2,7 +2,7 @@
 
 - Download below File
 
-# [Download - quicklab1065.xlsx]([https://www.youtube.com/@MyQwiklab](https://github.com/AnonymousOlix/My-Qwick-Lab-Resources/blob/main/September%20Week%203/quicklab1065.xlsx))
+# [Download quicklab1065.xlsx](https://github.com/AnonymousOlix/My-Qwick-Lab-Resources/blob/main/September%20Week%203/quicklab1065.xlsx)
 
 ### Congratulations 🎉 for completing the Lab !
 
