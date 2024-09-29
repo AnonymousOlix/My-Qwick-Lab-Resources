@@ -4,7 +4,8 @@
 
 - Download Below Files
 
-# [Download](https://drive.google.com/drive/folders/1Xi03XOQe_ZWaudlaKYL7gketBiIBgtun?usp=sharing)
+# [Download](https://github.com/AnonymousOlix/My-Qwick-Lab-Resources/blob/main/September%20Week%202/exported-data.csv)
+# [Download](https://github.com/AnonymousOlix/My-Qwick-Lab-Resources/blob/main/September%20Week%202/important-data.xlsx)
 
 
 
