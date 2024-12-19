@@ -5,9 +5,9 @@
 ### Run the following Commands in CloudShell
 
 ```
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/refs/heads/master/mini%20lab/quicklab6.sh
-sudo chmod +x quicklab6.sh
-./quicklab6.sh
+curl -LO raw.githubusercontent.com/QUICK-GCP-LAB/2-Minutes-Labs-Solutions/refs/heads/main/Mini%20lab%20Cloud%20Storage%206/shell.sh
+sudo chmod +x shell.sh
+./shell.sh
 ```
 
 * Type **clouds** for the Dataset name.
