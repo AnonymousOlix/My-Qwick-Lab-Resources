@@ -14,8 +14,8 @@
 
 ## 🚨 Replace the Code from here
 
-- Copy the **"Code.gs"** file [Click here](https://github.com/Techcps/GSP/blob/main/Creating%20a%20Gmail%20Add-on/code.gs.md)
-- Copy the **"appsscript.json"** file [Click here](https://github.com/Techcps/GSP/blob/main/Creating%20a%20Gmail%20Add-on/appsscript.json.md)
+- Copy the **"Code.gs"** file [Click here](https://github.com/AnonymousOlix/My-Qwick-Lab-Resources/blob/main/The%20Arcade%20Base%20Camp%20December%202024/code.gs.md)
+- Copy the **"appsscript.json"** file [Click here](https://github.com/AnonymousOlix/My-Qwick-Lab-Resources/blob/main/The%20Arcade%20Base%20Camp%20December%202024/appsscript.json.md)
 
 ---
 
