@@ -4,14 +4,9 @@
 
 ### Run the following Commands in CloudShell
 ```
-export REGION=
-```
-```
-curl -LO raw.githubusercontent.com/gcpsolution99/GCP-solution/refs/heads/main/GSP/ServiceMonitoring.sh
-
-sudo chmod +x ServiceMonitoring.sh
-
-./ServiceMonitoring.sh
+curl -LO raw.githubusercontent.com/Techcps/GSP-Short-Trick/master/APIs%20Explorer%3A%20App%20Engine/techcps422.sh
+sudo chmod +x techcps422.sh
+./techcps422.sh
 ```
 ### Congratulations 🎉 for completing the Lab !
 
