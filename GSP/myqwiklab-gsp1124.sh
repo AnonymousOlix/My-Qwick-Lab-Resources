@@ -50,7 +50,7 @@ display_banner() {
     echo "╔══════════════════════════════════════════════════════════════╗"
     echo "║                   🚀 CLOUD SECURITY LAB 🚀                   ║"
     echo "║                                                              ║"
-    echo "║           📺 MY QWIK AB   CLOUD TUTORIALS 📺                ║"
+    echo "║           📺 MY QWIKLAB   CLOUD TUTORIALS 📺                ║"
     echo "║                                                              ║"
     echo "║    🌐 YouTube: https://www.youtube.com/@MyQwiklab            ║"
     echo "║    ⭐ Subscribe for Cloud Security Content ⭐               ║"
