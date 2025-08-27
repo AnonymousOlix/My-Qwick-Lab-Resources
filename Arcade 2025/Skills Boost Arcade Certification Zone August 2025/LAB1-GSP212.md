@@ -5,9 +5,9 @@
 ### Run the following Commands in CloudShell
 
 ```
-curl -LO raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/gsp212.sh
-sudo chmod +x gsp212.sh
-./gsp212.sh
+curl -LO raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-gsp212.sh
+sudo chmod +x myqwiklab-gsp212.sh
+./myqwiklab-gsp212.sh
 ```
 
 ## Sink Name: ```vpc-flows```
