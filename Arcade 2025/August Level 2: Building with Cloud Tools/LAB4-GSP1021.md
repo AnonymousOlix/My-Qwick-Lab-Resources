@@ -3,14 +3,7 @@
 ## Solution
 
 ### Run the following Commands in CloudShell
-```
-export region1=
-export zone1=
-export region2=
-export zone2=
-export region3=
-export zone3=
-```
+
 ```
 curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-gsp1021.sh
 sudo chmod +x myqwiklab-gsp1021.sh
