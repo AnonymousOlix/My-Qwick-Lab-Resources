@@ -1,4 +1,4 @@
-# Continuous Delivery with Jenkins in Kubernetes Engine || [GSP075] ||
+# Extract, Analyze, and Translate Text from Images with the Cloud ML APIs || [GSP075] ||
 
 ## Solution
 
