@@ -13,89 +13,86 @@ for line in "${pattern[@]}"
 do
     echo -e "${YELLOW}${line}${NC}"
 done
+gcloud auth list
+gcloud config list project
 
-cat > prepare_disk.sh <<'EOF_END'
+gcloud services enable compute.googleapis.com
+gcloud services enable dns.googleapis.com
 
-gcloud services enable apikeys.googleapis.com
+sleep 20
 
-gcloud alpha services api-keys create --display-name="awesome" 
-
-KEY_NAME=$(gcloud alpha services api-keys list --format="value(name)" --filter "displayName=awesome")
-
-API_KEY=$(gcloud alpha services api-keys get-key-string $KEY_NAME --format="value(keyString)")
-
-cat > request.json <<EOF
-
-{
-    "config": {
-            "encoding":"FLAC",
-            "languageCode": "en-US"
-    },
-    "audio": {
-            "uri":"gs://cloud-samples-data/speech/brooklyn_bridge.flac"
-    }
-}
-
-EOF
-
-curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json \
-"https://speech.googleapis.com/v1/speech:recognize?key=${API_KEY}" > result.json
-
-cat result.json
-
-EOF_END
-export ZONE=$(gcloud compute instances list linux-instance --format 'csv[no-heading](zone)')
-
-gcloud compute scp prepare_disk.sh linux-instance:/tmp --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet
-gcloud compute ssh linux-instance --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet --command="bash /tmp/prepare_disk.sh"
-
-read -p "CHECK MY PROGRESS DONE TILL TASK 3 (Y/N)?" response
-
-if [[ "$response" =~ ^[Yy]$ ]]; then
-        echo "Proceeding with next steps!"
-else
-        echo "Please check the progress before proceeding."
-fi
+gcloud services list | grep -E 'compute|dns'
 
 
-cat > prepare_disk.sh <<'EOF_END'
+gcloud compute firewall-rules create fw-default-iapproxy \
+--direction=INGRESS \
+--priority=1000 \
+--network=default \
+--action=ALLOW \
+--rules=tcp:22,icmp \
+--source-ranges=35.235.240.0/20
 
-KEY_NAME=$(gcloud alpha services api-keys list --format="value(name)" --filter "displayName=awesome")
 
-API_KEY=$(gcloud alpha services api-keys get-key-string $KEY_NAME --format="value(keyString)")
+gcloud compute firewall-rules create allow-http-traffic --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
 
-rm -f request.json
 
-cat >> request.json <<EOF
+gcloud compute instances create us-client-vm --machine-type e2-micro --zone $zone1
 
- {
-    "config": {
-            "encoding":"FLAC",
-            "languageCode": "fr"
-    },
-    "audio": {
-            "uri":"gs://cloud-samples-data/speech/corbeau_renard.flac"
-    }
-}
+gcloud compute instances create europe-client-vm --machine-type e2-micro --zone $zone2
 
-EOF
+gcloud compute instances create asia-client-vm --machine-type e2-micro --zone $zone3
 
-curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json \
-"https://speech.googleapis.com/v1/speech:recognize?key=${API_KEY}" > result.json
 
-cat result.json
 
-EOF_END
 
-export ZONE=$(gcloud compute instances list linux-instance --format 'csv[no-heading](zone)')
+gcloud compute instances create us-web-vm \
+--zone=$zone1 \
+--machine-type=e2-micro \
+--network=default \
+--subnet=default \
+--tags=http-server \
+--metadata=startup-script='#! /bin/bash
+ apt-get update
+ apt-get install apache2 -y
+ echo "Page served from: us-east1" | \
+ tee /var/www/html/index.html
+ systemctl restart apache2'
 
-gcloud compute scp prepare_disk.sh linux-instance:/tmp --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet
 
-gcloud compute ssh linux-instance --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet --command="bash /tmp/prepare_disk.sh"
+gcloud compute instances create europe-web-vm \
+--zone=$zone2 \
+--machine-type=e2-micro \
+--network=default \
+--subnet=default \
+--tags=http-server \
+--metadata=startup-script='#! /bin/bash
+ apt-get update
+ apt-get install apache2 -y
+ echo "Page served from: europe-west4" | \
+ tee /var/www/html/index.html
+ systemctl restart apache2'
 
-#!/bin/bash
-YELLOW='\033[0;33m'
-NC='\033[0m' 
+
+sleep 20
+
+export US_WEB_IP=$(gcloud compute instances describe us-web-vm --zone=$zone1 --format="value(networkInterfaces.networkIP)")
+
+export EUROPE_WEB_IP=$(gcloud compute instances describe europe-web-vm --zone=$zone2 --format="value(networkInterfaces.networkIP)")
+
+
+
+gcloud dns managed-zones create example --description=test --dns-name=example.com --networks=default --visibility=private
+
+
+
+gcloud dns record-sets create geo.example.com \
+--ttl=5 --type=A --zone=example \
+--routing-policy-type=GEO \
+--routing-policy-data="$region1=$US_WEB_IP;$region2=$EUROPE_WEB_IP"
+
+
+
+gcloud dns record-sets list --zone=example
 pattern=(
 "**********************************************************"
 "**                                                      **"
