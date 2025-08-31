@@ -5,6 +5,12 @@
 ### Run below code in Cloud Shell
 
 ```
+export BUCKET_1=
+export BUCKET_2=
+export BUCKET_3=
+```
+
+```
 curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/Skill%20Badges/Get%20Started%20with%20Cloud%20Storage/myqwiklab-arc111.sh
 sudo chmod +x myqwiklab-arc111.sh
 ./myqwiklab-arc111.sh
