@@ -25,7 +25,7 @@ export task_5_file=""
 ### Run below code in Cloud Shell
 
 ```
-curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/Skill%20Badges/Get%20Started%20with%20Cloud%20Storage/myqwiklab-arc132.sh
+curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/Skill%20Badges/Cloud%20Speech%20API%203%20Ways/myqwiklab-arc132.sh
 sudo chmod +x myqwiklab-arc132.sh
 ./myqwiklab-arc132.sh
 ```
