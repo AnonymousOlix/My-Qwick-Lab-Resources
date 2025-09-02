@@ -4,13 +4,6 @@
 
 ### Run below code in Cloud Shell
 
-```
-export REGION=
-```
-
-```
-nvm install 22.6
-```
 
 ```
 curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-gsp1079.sh
