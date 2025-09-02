@@ -11,6 +11,8 @@ sudo chmod +x myqwiklab-gsp1089.sh
 ./myqwiklab-gsp1089.sh
 ```
 
+### Cloud VS Code : https://shell.cloud.google.com/
+
 
 ### Congratulations 🎉 for completing the Lab !
 
