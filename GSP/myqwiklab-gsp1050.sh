@@ -27,7 +27,7 @@ echo "${BG_BLUE}${BOLD}${WHITE}=================================================
 echo "${BG_BLUE}${BOLD}${WHITE}      WELCOME TO MY QWIKLAB CLOUD TUTORIALS       ${RESET}"
 echo "${BG_BLUE}${BOLD}${WHITE}==================================================${RESET}"
 echo ""
-echo "${CYAN}${BOLD}⚡ Expertly crafted by Dr. Abhishek Cloud${RESET}"
+echo "${CYAN}${BOLD}⚡ Expertly crafted by My Qwiklab Cloud${RESET}"
 echo "${YELLOW}${BOLD}📺 YouTube: ${UNDERLINE}https://www.youtube.com/@MyQwiklab/videos${RESET}"
 echo ""
 
