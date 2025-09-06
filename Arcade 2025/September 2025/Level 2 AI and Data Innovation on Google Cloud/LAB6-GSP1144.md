@@ -4,7 +4,9 @@
 
 ### Run below code in Cloud Shell
 
-
+```
+export REGION=
+```
 ```
 curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-gsp1144.sh
 sudo chmod +x myqwiklab-gsp1144.sh
