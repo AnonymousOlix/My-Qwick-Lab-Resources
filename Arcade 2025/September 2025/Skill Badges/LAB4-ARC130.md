@@ -10,9 +10,7 @@ export API_KEY=
 ```
 
 ```
-curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-arc130.sh
-sudo chmod +x myqwiklab-arc130.sh
-./myqwiklab-arc130.sh
+gcloud compute ssh lab-vm --zone=$ZONE --quiet --command "curl -LO raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-arc130.sh && sudo chmod +x myqwiklab-arc130.sh && ./myqwiklab-arc130.sh"
 ```
 
 ### Congratulations 🎉 for completing the Lab !
