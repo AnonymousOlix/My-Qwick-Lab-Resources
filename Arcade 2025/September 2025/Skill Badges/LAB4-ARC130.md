@@ -4,6 +4,10 @@
 
 ### Run below code in Cloud Shell
 
+```
+export ZONE=
+export API_KEY=
+```
 
 ```
 curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-arc130.sh
