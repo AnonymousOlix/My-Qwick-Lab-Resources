@@ -1,4 +1,4 @@
-# Analyze Sentiment with Natural Language API: Challenge Lab || [ARC114] ||
+# Analyze Sentiment with Natural Language API: Challenge Lab || [ARC130] ||
 
 ## Solution
 
@@ -6,9 +6,9 @@
 
 
 ```
-curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-arc114.sh
-sudo chmod +x myqwiklab-arc114.sh
-./myqwiklab-arc114.sh
+curl -LO https://raw.githubusercontent.com/AnonymousOlix/My-Qwick-Lab-Resources/refs/heads/main/GSP/myqwiklab-arc130.sh
+sudo chmod +x myqwiklab-arc130.sh
+./myqwiklab-arc130.sh
 ```
 
 ### Congratulations 🎉 for completing the Lab !
