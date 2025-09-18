@@ -1,4 +1,4 @@
-#Get Started with Dataplex: Challenge Lab || [ARC117] ||
+# Get Started with Dataplex: Challenge Lab || [ARC117] ||
 
 ## Solution
 
